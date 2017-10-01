@@ -1,11 +1,13 @@
 ---
 - name: Installation des serveurs web
   hosts: web
-  remote_user: stf
-
-  tasks:
+  remote_user: root
+  tasks: 
     - name: Installation de Git
-       apt: name-git update_cache=yes
-    - name: Installation de VIM
-       apt: name=vim
+      apt: name=git state=latest
+    - name: Installation htop
+      apt: name=htop state=latest		
+
+
+
 ...
