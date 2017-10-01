@@ -1,0 +1,8 @@
+ - - -
+ - name: Installation des serveurs web
+   hosts: web
+   remote_user: stf
+   tasks:
+    - name: Installation de Git
+      apt: name=git state=latest
+ ...	 	
