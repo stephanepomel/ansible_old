@@ -9,5 +9,12 @@
       apt: name=htop state=latest		
 
 
-
+- name: Show "salut les connards !"
+  hosts: web
+  remote_user: stf
+  tasks:
+    - name: Affichage "Salut les connards !"
+      shell: echo 'Salut les connards !'
+      register : stf	
+  
 ...
